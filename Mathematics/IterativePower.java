@@ -16,7 +16,7 @@ public class IterativePower {
 			if (n % 2 != 0)
 				res *= x;
 			x *= x;
-			n = n >> 1;
+			n = n >> 1; // n /= 2.
 		}
 		return res;
 	}
