@@ -9,16 +9,16 @@ package com.Gfg.Recursion;
  */
 
 public class NaturalNoSum {
-
+	
 	public static void main(String[] args) {
-		System.out.println(RecursiveNaturalSum(4));
+		System.out.println(GetNaturalSum(4));
 	}
 
-	private static int RecursiveNaturalSum(int n) {
+	private static int GetNaturalSum(int n) {
 		if (n >= 0) {
 			if (n == 0 || n == 1)
 				return n;
-			return n + RecursiveNaturalSum(n - 1);
+			return n + GetNaturalSum(n - 1);
 		}
 		return -1;
 	}
