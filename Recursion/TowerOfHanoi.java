@@ -5,6 +5,15 @@ package com.Gfg.Recursion;
  * Rules: 1. Only one disc moves at a time.
  * 2. No bigger disc should be above smaller one.
  * 3. Only the top disc of a tower can be moved.
+ * 
+ * Algorithm: [TOH (n, A, B, C) means From A to C using B]
+ * TOH (n, A, B, C) {
+ * 		TOH (n-1, A, C, B)
+ * 		Move Disc n from A to C.
+ * 		TOH (n-1, B, A, C)
+ * }
+ * 
+ * T(n) = O(2^n)
  */
 
 public class TowerOfHanoi {
