@@ -25,8 +25,12 @@ public class MaxSubArraySum {
 		return res;
 	}
 
-	// Maximum sum of sub-array ending with previous element is used.
-	// Result is updated if the current element needs to be considered.
+	/*- Kadane's algorithm
+	 * Maximum sum of sub-array ending with previous element is used.
+	 * maxEnding is used to see if the current element should be added to the formed
+	 * sub-array or should form a new sub-array.
+	 * Result is updated if the current element needs to be considered.
+	 */
 	private static int getMaximumSubarraySumEfficient(int[] arr, int n) {
 		int res = arr[0], maxEnding = arr[0], i;
 		for (i = 1; i < n; i++) {
